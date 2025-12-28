@@ -1,0 +1,17 @@
+<h1>Movie Details</h1>
+{% for movie in movies %}
+    <!-- <h1>Movie Details</h1> -->
+    <p>Title:{{ movie.title | upper }}<p>
+    <p>Year:{{ movie.year }}</p>
+    <p>Summary:{{ movie.summary | default:'No data available' }}</p>
+    {% if movie.success %}
+        <p><b>{{title}} movie was a sucess</b></p>
+        <br>
+    {% else %}
+        <p><b>{{title}} movie was a failure</b></p>
+        <br>
+    {% endif %}
+{% endfor %}
+
+
+
