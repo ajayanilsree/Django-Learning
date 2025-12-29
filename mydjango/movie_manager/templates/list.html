@@ -1,4 +1,18 @@
 {% extends 'base.html' %}
+{% load static %}
     {% block content %}
-        <h1>Movie List</h1>
+        <!-- <h1>Movie List</h1> -->
+        {% for movie in movies %}
+            <p><b>Title:{{ movie.title | upper }}</b></p>
+            <img src="{% static 'images/' %}{{ movie.img}}" alt="movielogo" width="100px" height="100px">
+            <p>Year:{{ movie.year }}</p>
+            <p>Summary:{{ movie.summary }}</p>
+            {% if movie.success %}
+                <p><b>Movie was a sucess at box offcie.</b></p>
+                <br>
+            {% else %}
+                <p><b>Movie was a failure at box office.</b></p>
+                <br>
+            {% endif %}
+        {% endfor %}
     {% endblock %}

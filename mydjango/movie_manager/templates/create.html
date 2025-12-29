@@ -1,4 +1,14 @@
 {% extends 'base.html' %}
     {% block content %}
         <h1>Create</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label>Title:</label>
+            <input type="text" name="title">
+            <label>Year:</label>
+            <input type="text" name="year">
+            <label>Summary:</label>
+            <input type="text" name="summary">
+            <button type="submit">create</button>
+        </form>
     {% endblock %}
