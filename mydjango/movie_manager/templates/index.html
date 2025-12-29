@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+    {% block content %}
+        <h1>Index</h1>
+        <ul>
+            <li><a href="{% url 'create' %}">Create</a></li>
+            <li><a href="{% url 'edit' %}">Edit</a></li>
+            <li><a href="{% url 'list' %}">List</a></li>
+        </ul>
+    {% endblock %}
