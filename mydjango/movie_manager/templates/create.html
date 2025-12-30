@@ -4,11 +4,11 @@
         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <label>Title:</label>
-            <input type="text" name="title">
+            <input type="text" name="title"><br><br>
             <label>Year:</label>
-            <input type="text" name="year">
-            <label>Summary:</label>
-            <input type="text" name="summary">
-            <button type="submit">create</button>
+            <input type="number" name="year"><br><br>
+            <label></label>
+            <textarea name="summary" placeholder="Summary" rows="4" cols="22" style="margin-left: 37px;"></textarea><br><br>
+            <button type="submit"style="margin-left: 37px;">create</button>
         </form>
     {% endblock %}
