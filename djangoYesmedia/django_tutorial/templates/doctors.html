@@ -1,8 +1,21 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %} 
     Doctors
 {% endblock %}
-
+{% block doct_css %}
+    <link rel="stylesheet" href="{% static '/css/doctors.css' %}">
+{% endblock %}
 {% block content %} 
     <h1>Doctors</h1>
+<div class="container">
+    {% for d in doct %}
+    <div class="doctors">
+        <img src="{{d.doc_image.url}}" alt="doctor image">
+        <h4>{{d.doc_name}}</h1>
+        <h5>{{d.doc_spec}}</h5>
+        <h5>{{d.dept_name}}</h5>
+    </div>
+    {% endfor %}
+</div>
 {% endblock %}

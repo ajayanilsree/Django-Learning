@@ -1,0 +1,45 @@
+
+hr{
+    margin-bottom: 0px;
+}
+.container-form{
+    height: 465px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(97, 146, 238,0.5);
+}
+form{
+     width:350px ;
+     margin-top: 30px;
+     border: 1px solid grey;
+     /* padding: 50px; */
+     background-color: rgb(240, 236, 236);
+     height: 450px;
+     margin-bottom: 28px;
+     padding-top: 27px;
+}
+h1{
+    display: flex;
+    justify-content: center;
+}
+/* button{
+    margin-left: 55px;
+} */
+.container-form form p input{
+    width: 95%;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.container-form form p label{
+    width: 100%;
+    text-align: center;
+}
+.container-form form p select{
+    width: 95%;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.btn-submit{
+    text-align: center;
+}

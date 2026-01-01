@@ -1,8 +1,19 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %} 
     Department
 {% endblock %}
+{% block dept_css %}
+    <link rel="stylesheet" href="{% static '/css/department.css' %}">
+{% endblock %}
 
 {% block content %} 
-    <h1>Department</h1>
+    <h1 style="text-align: center;">Our Departments</h1>
+    <hr>
+    {% for d in dept %}
+    <div class="derma">
+        <h1>{{d.dept_name}}</h1>
+        <p>{{d.dept_description}}</p>
+    </div>
+    {% endfor %}
 {% endblock %}

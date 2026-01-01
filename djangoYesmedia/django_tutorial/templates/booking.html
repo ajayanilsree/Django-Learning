@@ -1,8 +1,51 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %} 
     Booking
 {% endblock %}
+{% block booking_css %}
+    <link rel="stylesheet" href="{% static '/css/booking.css' %}">
+{% endblock %}
 
 {% block content %} 
-    <h1>Booking Page</h1>
-{% endblock %}
+    <h1>Make an appointment</h1>
+    <hr>
+    <div class="container-form">
+    <form action="" method="post">
+    {% csrf_token %}
+
+    <p>
+        {{ form.p_name.label_tag }}<br>
+        {{ form.p_name }}
+    </p>
+
+    <p>
+        {{ form.p_phone.label_tag }}<br>
+        {{ form.p_phone }}
+    </p>
+
+    <p>
+        {{ form.p_email.label_tag }}<br>
+        {{ form.p_email }}
+    </p>
+
+    <p>
+        {{ form.doc_name.label_tag }}<br>
+        {{ form.doc_name }}
+    </p>
+
+    <p>
+        {{ form.booking_date.label_tag }}<br>
+        {{ form.booking_date }}
+    </p>
+    <div class="btn-submit">
+        <button type="submit">Submit</button>
+    </div>
+</form>
+{% if success %}
+    <script>
+        alert("Booking is confirmed")
+    </script>
+{% endif %}
+    </div>
+{% endblock %}  
